@@ -1,29 +1,6 @@
-const myString: string = 'Eirik';
+// tax can now be either a number or a string
+let tax: number | string = 100;
 
-console.log(myString.toUpperCase());
+tax = tax + '$'; // this works
 
-let num: number = 20;
-
-num = num * 2;
-
-console.log(num);
-
-const apple: boolean = true;
-
-if (apple) {
-  console.log('apple');
-}
-
-interface Person {
-  name: string;
-  skin: string;
-  male: boolean;
-}
-
-const user: Person = {
-  name: 'Eirik',
-  skin: 'caucation',
-  male: true,
-};
-
-console.log(user);
+console.log(tax);
