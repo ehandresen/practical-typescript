@@ -2,8 +2,9 @@ import './style.css';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { setupCounter } from './counter.ts';
-import './fundamentals/union-type.ts';
-import './fundamentals/any.ts';
+// import './fundamentals/union-type.ts';
+// import './fundamentals/any.ts';
+import './fundamentals/undefined.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

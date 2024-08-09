@@ -5,4 +5,4 @@ notSure = false;
 
 console.log(typeof notSure); // boolean
 
-let random; // type is any ‹code›
+let random; // type is any
