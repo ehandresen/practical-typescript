@@ -35,7 +35,8 @@ let laptop: { brand: string; year: number } = {
 // 3. Create an array products of type { title: string, price?: number }[] and assign it some values. Then, try to add an object with a price property of type string to it.
 
 const bed = { title: 'bed', price: 100 };
-const tv = { title: 'bed', price: 100 };
-const lamp = { title: 'bed', price: '20' };
+const tv = { title: 'tv' };
 
-let products: { title: string; price: number }[] = [bed, tv, lamp];
+let products: { title: string; price?: number }[] = [bed, tv];
+console.log(products);
+products.push({ title: 'swimming pool', price: 'expensive' });
