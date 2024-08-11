@@ -23,5 +23,3 @@ console.log(colors);
 let mixedArray: (number | string)[] = [10, 'banana', 5, 'apple'];
 mixedArray.push(true); //typescript error
 console.log(mixedArray);
-
-// next objects

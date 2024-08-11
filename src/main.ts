@@ -5,7 +5,8 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/union-type.ts';
 // import './fundamentals/any.ts';
 // import './fundamentals/undefined.ts';
-import './fundamentals/arrays.ts';
+// import './fundamentals/arrays.ts';
+import './fundamentals/objects.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
