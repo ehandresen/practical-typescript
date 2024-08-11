@@ -11,6 +11,5 @@ let pen = { title: 'pen', cost: 10 };
 let notebook = { title: 'notebook' };
 
 // optional property (here 'cost')
-let items: { title: string; cost?: number }[] = [book, pen, notebook];
-
-console.log(items);
+let items: { readonly title: string; cost?: number }[] = [book, pen, notebook];
+items[0].title = 'new book'; // cannot change read-only property
