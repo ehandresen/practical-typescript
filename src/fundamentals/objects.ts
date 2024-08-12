@@ -40,3 +40,5 @@ const tv = { title: 'tv' };
 let products: { title: string; price?: number }[] = [bed, tv];
 console.log(products);
 products.push({ title: 'swimming pool', price: 'expensive' });
+
+console.table(products);
