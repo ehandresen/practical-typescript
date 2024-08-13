@@ -33,7 +33,7 @@ console.log('Price of book', book); // price of book 80
 let book2 = calculatePrice(50);
 console.log('Price of book', book2); // price of book 50
 
-//default parameters
+// default parameters
 function calculateScore(
   initialScore: number,
   penaltyPoints: number = 0 // default value
@@ -41,5 +41,20 @@ function calculateScore(
   return initialScore - penaltyPoints;
 }
 
-let scoreAfterPenalty = calculateScore(100, 20);
-let scoreBeforePenalty = calculateScore(100);
+let scoreAfterPenalty = calculateScore(100, 20); // 80
+let scoreBeforePenalty = calculateScore(100); // 100
+
+// rest parameter
+function sum(message: string, ...numbers: number[]): string {
+  const doubled = numbers.map((num) => num * 2);
+  console.log(doubled);
+
+  const total = numbers.reduce((previous, current) => {
+    return previous + current;
+  }, 0);
+
+  return `${message}${total}`;
+}
+
+const result = sum(`the total is: `, 1 + 2 + 3 + 4 + 5 + 6 + 7);
+console.log(result);
