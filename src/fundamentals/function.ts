@@ -24,10 +24,22 @@ if (isNameInList(nameToCheck)) {
 
 // optional parameters
 function calculatePrice(price: number, discount?: number): number {
-  if (!discount) return price;
-
-  return price * discount;
+  return price - (discount || 0);
 }
 
-let book = calculatePrice(100);
-console.log('Price of book', book);
+let book = calculatePrice(100, 20);
+console.log('Price of book', book); // price of book 80
+
+let book2 = calculatePrice(50);
+console.log('Price of book', book2); // price of book 50
+
+//default parameters
+function calculateScore(
+  initialScore: number,
+  penaltyPoints: number = 0 // default value
+): number {
+  return initialScore - penaltyPoints;
+}
+
+let scoreAfterPenalty = calculateScore(100, 20);
+let scoreBeforePenalty = calculateScore(100);
