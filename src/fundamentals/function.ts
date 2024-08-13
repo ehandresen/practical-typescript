@@ -14,4 +14,20 @@ function isNameInList(name: string): boolean {
   return names.includes(name);
 }
 
-console.log(isNameInList('Tim')); // true
+const nameToCheck = 'John';
+
+if (isNameInList(nameToCheck)) {
+  console.log(`${nameToCheck} is in list`);
+} else {
+  console.log(`${nameToCheck} is in NOT list`);
+}
+
+// optional parameters
+function calculatePrice(price: number, discount?: number): number {
+  if (!discount) return price;
+
+  return price * discount;
+}
+
+let book = calculatePrice(100);
+console.log('Price of book', book);
