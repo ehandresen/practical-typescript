@@ -56,5 +56,15 @@ function sum(message: string, ...numbers: number[]): string {
   return `${message}${total}`;
 }
 
-const result = sum(`the total is: `, 1 + 2 + 3 + 4 + 5 + 6 + 7);
+const result = sum(`the total is: `, 1 + 2 + 3 + 4 + 5 + 6 + 7 + 9);
 console.log(result);
+
+// void keyword
+function logMessage(message: string): void {
+  // typescript infers the void return type if no return type is set
+  console.log(message);
+}
+
+logMessage('Hello, Typescript');
+
+// using union types as function parameter
