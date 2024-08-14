@@ -54,3 +54,38 @@ function setTheme(t: Theme) {
 }
 
 setTheme('dark'); // only 'dark' or 'light' is available as a param here
+
+// challenge
+type Employee = {
+  id: number;
+  name: string;
+  department: string;
+};
+
+type Manager = {
+  id: number;
+  name: string;
+  employees: Employee[];
+};
+
+type Staff = Employee | Manager;
+
+function printStaffDetails(staff: Staff): void {
+  if ('employees' in staff) {
+    console.log(
+      `${staff.name} is a manager for ${staff.employees.length} employees`
+    );
+  } else {
+    console.log(
+      `${staff.name} is an employee in the ${staff.department} department`
+    );
+  }
+}
+
+const alice: Employee = { id: 1, name: 'alice', department: 'Sales' };
+const bob: Employee = { id: 2, name: 'bob', department: 'HR' };
+
+const charley: Manager = { id: 3, name: 'charley', employees: [alice, bob] };
+
+printStaffDetails(charley);
+printStaffDetails(alice);
