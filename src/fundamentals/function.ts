@@ -80,3 +80,31 @@ function processInput(input: string | number): void {
 
 processInput(10);
 processInput('Hello');
+
+//* objects are parameters
+function createEmployee({ id }: { id: number }): {
+  id: number;
+  isActive: boolean;
+} {
+  return {
+    id,
+    isActive: id % 2 === 0,
+  };
+}
+
+const employee = createEmployee({ id: 2 });
+const employee2 = createEmployee({ id: 3 });
+console.log(employee, employee2);
+
+// alternative
+
+function createStudent(student: { id: number; name: string }): void {
+  console.log(`Welcome ${student.name.toUpperCase()}`);
+}
+
+const newStudent = {
+  id: 1,
+  name: 'John',
+};
+
+createStudent(newStudent);
