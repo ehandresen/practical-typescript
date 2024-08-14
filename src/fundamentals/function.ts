@@ -105,6 +105,10 @@ function createStudent(student: { id: number; name: string }): void {
 const newStudent = {
   id: 1,
   name: 'John',
+  age: 18,
 };
 
-createStudent(newStudent);
+createStudent(newStudent); // typescript doesn't complain
+
+// excess property check
+createStudent({ id: 2, name: 'bob', age: 10 }); // typescript complains
