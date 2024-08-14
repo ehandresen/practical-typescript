@@ -42,3 +42,5 @@ console.log(products);
 products.push({ title: 'swimming pool', price: 'expensive' });
 
 console.table(products);
+
+// test github
