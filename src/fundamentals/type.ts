@@ -41,3 +41,16 @@ function createUser2(user: { id: number; name: string; isActive: boolean }): {
 
   return user;
 } */
+
+// additional info
+type Theme = 'light' | 'dark';
+
+let theme: Theme;
+theme = 'dark';
+theme = 'light';
+
+function setTheme(t: Theme) {
+  theme = t;
+}
+
+setTheme('dark'); // only 'dark' or 'light' is available as a param here
