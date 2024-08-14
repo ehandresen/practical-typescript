@@ -22,7 +22,7 @@ if (isNameInList(nameToCheck)) {
   console.log(`${nameToCheck} is in NOT list`);
 }
 
-// optional parameters
+//* optional parameters
 function calculatePrice(price: number, discount?: number): number {
   return price - (discount || 0);
 }
@@ -33,7 +33,7 @@ console.log('Price of book', book); // price of book 80
 let book2 = calculatePrice(50);
 console.log('Price of book', book2); // price of book 50
 
-// default parameters
+//* default parameters
 function calculateScore(
   initialScore: number,
   penaltyPoints: number = 0 // default value
@@ -44,7 +44,7 @@ function calculateScore(
 let scoreAfterPenalty = calculateScore(100, 20); // 80
 let scoreBeforePenalty = calculateScore(100); // 100
 
-// rest parameter
+//* rest parameter
 function sum(message: string, ...numbers: number[]): string {
   const doubled = numbers.map((num) => num * 2);
   console.log(doubled);
@@ -59,7 +59,7 @@ function sum(message: string, ...numbers: number[]): string {
 const result = sum(`the total is: `, 1 + 2 + 3 + 4 + 5 + 6 + 7 + 9);
 console.log(result);
 
-// void keyword
+//* void keyword
 function logMessage(message: string): void {
   // typescript infers the void return type if no return type is set
   console.log(message);
@@ -67,4 +67,16 @@ function logMessage(message: string): void {
 
 logMessage('Hello, Typescript');
 
-// using union types as function parameter
+//* using union types as function parameter and type guards
+// type guard checks parameter at runtime
+function processInput(input: string | number): void {
+  console.log(typeof input);
+  if (typeof input === 'number') {
+    console.log(input * 2);
+  } else if (typeof input === 'string') {
+    console.log(input.toUpperCase());
+  }
+}
+
+processInput(10);
+processInput('Hello');
