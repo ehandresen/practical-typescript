@@ -89,3 +89,33 @@ const charley: Manager = { id: 3, name: 'charley', employees: [alice, bob] };
 
 printStaffDetails(charley);
 printStaffDetails(alice);
+
+//* intersection type
+type Book = {
+  id: number;
+  name: string;
+  price: number;
+};
+
+// add more types u want for this particular instance
+type DiscountedBook = Book & {
+  discount: number;
+};
+
+const book1: Book = {
+  id: 1,
+  name: 'how to kill a dragon',
+  price: 25,
+};
+const book2: Book = {
+  id: 2,
+  name: 'secret unicorn',
+  price: 40,
+};
+
+const discountedBook: DiscountedBook = {
+  id: 1,
+  name: 'big dog',
+  price: 25,
+  discount: 0.15,
+};

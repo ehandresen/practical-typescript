@@ -9,6 +9,7 @@ import './fundamentals/arrays.ts';
 import './fundamentals/objects.ts';
 import './fundamentals/function.ts';
 import './fundamentals/type.ts';
+import './fundamentals/interface.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
