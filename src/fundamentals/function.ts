@@ -110,5 +110,24 @@ const newStudent = {
 
 createStudent(newStudent); // typescript doesn't complain
 
-// excess property check
+//* excess property check
 createStudent({ id: 2, name: 'bob', age: 10 }); // typescript complains
+
+// challenges
+function processData(
+  input: string | number,
+  config: { reverse: boolean } = { reverse: false } // setting default value
+): string | number {
+  if (typeof input === 'number') {
+    return input * input;
+  } else {
+    if (config.reverse === true) {
+      return input.split('').reverse().join('');
+    }
+    return input.toUpperCase();
+  }
+}
+
+console.log(processData('banana')); // BANANA
+console.log(processData('banana', { reverse: true })); // ananab
+console.log(processData(8)); // 64

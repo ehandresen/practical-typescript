@@ -2,12 +2,13 @@ import './style.css';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { setupCounter } from './counter.ts';
-// import './fundamentals/union-type.ts';
-// import './fundamentals/any.ts';
-// import './fundamentals/undefined.ts';
-// import './fundamentals/arrays.ts';
-// import './fundamentals/objects.ts';
+import './fundamentals/union-type.ts';
+import './fundamentals/any.ts';
+import './fundamentals/undefined.ts';
+import './fundamentals/arrays.ts';
+import './fundamentals/objects.ts';
 import './fundamentals/function.ts';
+import './fundamentals/type.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
