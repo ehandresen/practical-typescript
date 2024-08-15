@@ -11,6 +11,7 @@ import './fundamentals/function.ts';
 import './fundamentals/type.ts'; */
 import './fundamentals/interface/interface.ts';
 import './fundamentals/interface/merging.ts';
+import './fundamentals/interface/challenge.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
