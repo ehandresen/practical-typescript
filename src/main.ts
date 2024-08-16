@@ -13,6 +13,7 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/interface/merging.ts';
 // import './fundamentals/interface/challenge.ts';
 import './fundamentals/tuple.ts';
+import './fundamentals/enum.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
