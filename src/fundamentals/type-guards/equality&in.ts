@@ -23,3 +23,14 @@ const animal: Animal = {
 };
 
 makeSound(animal);
+
+// truthy/falsy guard
+function printLength(str: string | null | undefined): void {
+  if (str) {
+    console.log(str.length);
+  } else {
+    console.log('no string provided');
+  }
+}
+printLength('hello');
+printLength(undefined);
