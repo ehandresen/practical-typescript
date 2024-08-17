@@ -18,6 +18,7 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/modules/modules.ts';
 // import './fundamentals/modules/import.ts';
 import './fundamentals/type-guards/typeof.ts';
+import './fundamentals/type-guards/equality&in.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
