@@ -12,9 +12,11 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/interface/interface.ts';
 // import './fundamentals/interface/merging.ts';
 // import './fundamentals/interface/challenge.ts';
-import './fundamentals/tuple.ts';
-import './fundamentals/enum.ts';
-import './fundamentals/type/type-assertion.ts';
+// import './fundamentals/tuple.ts';
+// import './fundamentals/enum.ts';
+// import './fundamentals/type/type-assertion.ts';
+import './fundamentals/modules/modules.ts';
+import './fundamentals/modules/import.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
