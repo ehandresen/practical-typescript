@@ -15,8 +15,9 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/tuple.ts';
 // import './fundamentals/enum.ts';
 // import './fundamentals/type/type-assertion.ts';
-import './fundamentals/modules/modules.ts';
-import './fundamentals/modules/import.ts';
+// import './fundamentals/modules/modules.ts';
+// import './fundamentals/modules/import.ts';
+import './fundamentals/type-guards/typeof.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
