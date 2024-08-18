@@ -17,3 +17,17 @@ const someNumberValue = genericFunction<number>(100);
 const someBoolean = genericFunction<boolean>(true);
 
 console.log(someStringValue, someNumberValue, someBoolean);
+
+interface GenericInterface<T> {
+  value: T;
+  getValue(): T;
+}
+
+const genericString: GenericInterface<string> = {
+  value: 'hello world',
+  getValue() {
+    return this.value;
+  },
+};
+
+console.log(genericString.getValue());
