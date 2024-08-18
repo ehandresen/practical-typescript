@@ -4,6 +4,7 @@ import { z } from 'zod';
 
 const url = 'https://www.course-api.com/react-tours-project';
 
+// zod has a bunch of useful methods likr 'minLength' we can use on our properties
 const tourSchema = z.object({
   id: z.string(),
   name: z.string(),
