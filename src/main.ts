@@ -23,6 +23,7 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/fetch-data.ts';
 import './fundamentals/generics/intro.ts';
 import './fundamentals/generics/function&interface.ts';
+import './fundamentals/generics/create-array.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

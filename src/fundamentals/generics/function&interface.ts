@@ -39,3 +39,4 @@ async function someFun(): Promise<number> {
 }
 
 const result = someFun();
+console.log(result);
