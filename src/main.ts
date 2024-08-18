@@ -20,10 +20,10 @@ import { setupCounter } from './counter.ts';
 // import './fundamentals/type-guards/typeof.ts';
 // import './fundamentals/type-guards/equality&in.ts';
 // import './fundamentals/type-guards/instanceof.ts';
-// import './fundamentals/fetch-data.ts';
-import './fundamentals/generics/intro.ts';
-import './fundamentals/generics/function&interface.ts';
-import './fundamentals/generics/create-array.ts';
+import './fundamentals/fetch-data.ts';
+// import './fundamentals/generics/intro.ts';
+// import './fundamentals/generics/function&interface.ts';
+// import './fundamentals/generics/create-array.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

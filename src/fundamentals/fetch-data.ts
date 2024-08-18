@@ -1,12 +1,28 @@
+// validating data on runtime is possible to do manually, but tricky
+// so a library like 'zod' is great for that
+import { z } from 'zod';
+
 const url = 'https://www.course-api.com/react-tours-project';
 
-type Tour = {
+const tourSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  info: z.string(),
+  image: z.string(),
+  price: z.string(),
+  // something: z.string(),
+  // now this will trigger an error, because 'something' is not a property in our data structure
+});
+
+type Tour = z.infer<typeof tourSchema>;
+
+/* type Tour = {
   id: string;
   name: string;
   info: string;
   image: string;
   price: string;
-};
+}; */
 
 async function fetchData(url: string): Promise<Tour[]> {
   try {
@@ -17,10 +33,16 @@ async function fetchData(url: string): Promise<Tour[]> {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data: Tour[] = await response.json();
-    console.log(data);
+    const rawData: Tour[] = await response.json();
 
-    return data;
+    const result = tourSchema.array().safeParse(rawData);
+    console.log(result);
+
+    if (!result.success) {
+      throw new Error(`invalid data: ${result.error}`);
+    }
+
+    return result.data;
   } catch (error) {
     const errorMsg =
       error instanceof Error ? error.message : 'there was an error...';
