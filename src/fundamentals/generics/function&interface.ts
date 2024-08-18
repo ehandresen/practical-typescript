@@ -31,3 +31,11 @@ const genericString: GenericInterface<string> = {
 };
 
 console.log(genericString.getValue());
+
+// promise example
+
+async function someFun(): Promise<number> {
+  return 123;
+}
+
+const result = someFun();
